@@ -10,7 +10,7 @@ var logic = require('../logic.js');
 
 
 test('output is an array', function(t) {
-  t.equal(typeof logic.deleteTodo(state, "-2"), Array, "typeof output should be an array");
+  t.equal(Array.isArray(logic.deleteTodo(state, "-2")), true, "typeof output should be an array");
   t.end();
 });
 
