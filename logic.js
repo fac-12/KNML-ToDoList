@@ -19,7 +19,7 @@ var todoFunctions = {
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
     return todos.map(function(todo){
-      return JSON.parse(JSON.stringify(object));
+      return JSON.parse(JSON.stringify(todo));
     });
   },
 
@@ -33,6 +33,11 @@ var todoFunctions = {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    var firstArr = todoFunctions.cloneArrayOfObjects(todos);
+    return firstArr.filter( (todo) => {
+      return todo.id !== idToDelete;
+    });
+
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
