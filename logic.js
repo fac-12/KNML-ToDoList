@@ -45,6 +45,12 @@ var todoFunctions = {
     // this element will have its done value toggled
     // hint: array.map
     var firstArr = todoFunctions.cloneArrayOfObjects(todos);
+    for (var i=0; i<firstArr.length; i++) {
+      if(firstArr[i].id == idToMark) {
+        if (firstArr[i].done === false) {firstArr[i].done = true;}
+        else if (firstArr[i].done === true) {firstArr[i].done = false;}
+      }
+    }
     return firstArr;
   },
   sortTodos: function(todos, sortFunction) {
