@@ -14,7 +14,7 @@ test('output is an array', function(t) {
   t.end();
 });
 
-// test('array length is one less than input length', function(t) {
-//   t.equal(logic.deleteTodo(todos, idToDelete).length, logic.todos.length - 1, "length of array should be one less than input length");
-//   t.end();
-// });
+test('array length is one less than input length', function(t) {
+  t.equal((logic.deleteTodo(state, "-2")).length, 2, "length of array should be one less than input length");
+  t.end();
+});
