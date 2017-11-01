@@ -56,8 +56,11 @@ var todoFunctions = {
         else if (firstArr[i].done === true) {firstArr[i].done = false;}
       }
     }
+
+    console.log(firstArr);
     return firstArr;
   },
+
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
