@@ -10,11 +10,11 @@ var logic = require('../logic.js');
 
 
 test('output is an array', function(t) {
-  t.equal(Array.isArray(logic.deleteTodo(state, "-2")), true, "typeof output should be an array");
+  t.equal(Array.isArray(logic.deleteTodo(state, -2)), true, "typeof output should be an array");
   t.end();
 });
 
 test('array length is one less than input length', function(t) {
-  t.equal((logic.deleteTodo(state, "-2")).length, 2, "length of array should be one less than input length");
+  t.equal((logic.deleteTodo(state, -2)).length, 2, "length of array should be one less than input length");
   t.end();
 });
