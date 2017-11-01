@@ -43,3 +43,8 @@ test('output is an array', function(t) {
   t.equal(Array.isArray(logic.markTodo(testArr, -2)), true, "typeof output should be an array");
   t.end();
 });
+
+test('Element with idToMark done value will be toggled', function(t) {
+  t.equal(logic.markTodo(testArr, -2)[1].done, true, "done value should be toggled");
+  t.end();
+});
