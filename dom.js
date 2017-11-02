@@ -15,13 +15,10 @@
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
-    // you will need to use addEventListener
-    // add span holding description
-    // var textDescription = document.createTextNode()
-    // document.createElement('SPAN', function(){
-    // });
-    // var newTodo = document.getElementsByName('description').value;
-    // };
+    var span = document.createElement('span');
+    var todoText = document.createTextNode(todo.description);
+    span.appendChild(todoText);
+    todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
 
     // this adds the delete button
