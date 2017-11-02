@@ -56,30 +56,28 @@ test('Element with idToMark done value will be toggled', function(t) {
   t.end();
 });
 
-test('check add to do', function(t) {
-  var actual = logic.addTodo(todos, newTodo);
-  var expected = [
-    {
-      id: -1,
-      description: "smash avocados",
-      done: true,
-  },
-   {
-     id: 0,
-     description: "make coffee",
-     done: false,
-   },
-   {
-     id: 1,
-     description: "new2",
-     done: true,
-   },
-  ];
-  t.deepEqual(actual, expected, 'new obj added to the array');
+// tests for addTodo function
+
+test('addTodo returns an object', function(t) {
+  t.equal(typeof logic.addTodo(todoTest, newTodoTest), "object", "Addtodo returns an object");
   t.end();
 });
+test('Addtodo returns an object with newTodo added', function(t){
+  t.equal(logic.addTodo(todoTest, newTodoTest).length, todoTest.length +1, "Addtodo returns an object with newTodo added");
+  t.end();
+});
+test('Returns the todo argument unchanged', function(t){
+  t.equal(todoTest, [{id: -1, description: "smash avocados", done: true,},{id: 0, description: "make coffee", done: false,},];, "Addtodo returns todo argument unchanged");
+  t.end();
+});
+// //need to find a method to use on the object that checks for id
+// test('Addtodo generates a new id', function(t){
+//   t.equal(logic.addTodo(todoTest, newTodoTest), "", "Addtodo generates a new id");
+//   t.end();
+// })
+});
 
-var todos = [
+var todoTest = [
   {
     id: -1,
     description: "smash avocados",
@@ -93,7 +91,7 @@ var todos = [
  },
 ];
 
-var newTodo =
+var newTodoTest =
   {
     description: "new2",
     done: true,

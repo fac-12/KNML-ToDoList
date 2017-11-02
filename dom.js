@@ -46,6 +46,7 @@
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
+      event.preventDefault();
       // what is inside event.target
       var description = '?'; // event.target ....
 
