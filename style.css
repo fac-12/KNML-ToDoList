@@ -8,11 +8,12 @@
   padding: 2%;
   display: block;
   box-sizing: border-box;
+  height: 50px;
 }
 
 .todo-item span{
   display: inline-block;
-  min-width: 300px;
+  min-width: 80%;
 }
 
 .todo-container {
@@ -33,7 +34,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /*background-color: blue;*/
 }
 
 body {
@@ -43,6 +43,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 .heading {
   display: flex;
   justify-content: center;
@@ -58,5 +59,11 @@ body {
 }
 input[type='text'] {
   width: 40%;
+}
 
+
+button {
+background-color: red;
+width: 10%;
+height: 104%;
 }
