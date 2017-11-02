@@ -53,16 +53,15 @@
   // bind create todo form
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-    var todos = {};
-    event.preventDefault();
-
-   todos.description = event.target.description.value;
-   todos.done = false;
-   event.target.description.value = " ";// event.target ....
-
+      var todos = {};
+      event.preventDefault();
+      todos.description = event.target.description.value;
+      todos.done = false;
+      // event.target ....
       // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state, todos); // ?? change this!
       update(newState);
+      event.target[0].value = "";
     });
   }
 
