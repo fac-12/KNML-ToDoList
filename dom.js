@@ -7,7 +7,7 @@
   var addTodoForm = document.getElementById('add-todo');
 
   var state = [
-    { id: -3, description: 'first todo', done: true},
+    { id: -3, description: 'first todo', done: false},
     { id: -2, description: 'second todo', done: false},
     { id: -1, description: 'third todo', done: false},
   ]; // this is our initial todoList
@@ -18,7 +18,7 @@
     var span = document.createElement('span');
     var todoText = document.createTextNode(todo.description);
       todoNode.className = 'todo-item';
-      todoText.className = 'todoText';
+      todoText.className = 'todoText strikethrough';
     span.appendChild(todoText);
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
@@ -37,11 +37,21 @@
     // add markTodo button
     var markTodoButtonNode = document.createElement('button');
     markTodoButtonNode.className = 'markTodo-btn';
+    markTodoButtonNode.id = 'markBtn'
     var markText = document.createTextNode('✔');
     markTodoButtonNode.appendChild(markText);
     markTodoButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
-      update(newState);
+      if (span.classList.contains("strikethrough")) {
+        span.classList.remove("strikethrough");
+        todo.done = false;
+        console.log(span.classList);
+      } else {
+          span.classList.add("strikethrough");
+          todo.done= true;
+      }
+    // update(newState);
+
     });
     todoNode.appendChild(markTodoButtonNode);
 
@@ -64,6 +74,7 @@
       var newState = todoFunctions.addTodo(state, todos); // ?? change this!
       update(newState);
     });
+
   }
 
   // you should not need to change this function
