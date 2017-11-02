@@ -20,7 +20,7 @@
     span.appendChild(todoText);
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
-    };
+
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.className = 'delete-btn';
@@ -47,14 +47,16 @@
   // bind create todo form
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-      // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
-      // what is inside event.target?
+    var todos = {};
+    event.preventDefault();
 
-      var description = '?'; // event.target ....
+   todos.description = event.target.description.value;
+   description = " ";// event.target ....
+   todos.done = false;
+
 
       // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      var newState = todoFunctions.addTodo(state, todos); // ?? change this!
       update(newState);
     });
   }
