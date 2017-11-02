@@ -40,6 +40,7 @@
     var markText = document.createTextNode('✔');
     markTodoButtonNode.appendChild(markText);
     markTodoButtonNode.addEventListener('click', function(event) {
+      
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
     });

@@ -8,13 +8,10 @@
   font-size: 2rem;
   display: block;
   box-sizing: border-box;
-<<<<<<< HEAD
   -webkit-box-shadow: -4px 9px 39px 3px rgba(0,0,0,0.75);
   -moz-box-shadow: -4px 9px 39px 3px rgba(0,0,0,0.75);
   box-shadow: -4px 9px 39px 3px rgba(0,0,0,0.75);
-=======
   height: 50px;
->>>>>>> master
 }
 
 .todo-item span{
@@ -27,7 +24,7 @@
 .todo-container {
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+justify-content: flex-start;
 align-items: center;
 flex-wrap: nowrap;
 height: 60vh;
@@ -87,9 +84,7 @@ input[type="text"]::-webkit-input-placeholder {
 }
 
 input[type='submit'] {
-  border-radius: 5%;
-  outline: none;
-  border: none;
+  border-left-color: white;
   width: 10%;
   font-family: 'Rubik Mono One', sans-serif;
 }
@@ -102,13 +97,35 @@ font-size: 1em;
 }
 
 input[value="+"]{
-  font-size: 65px;
-  font-family: 'Raleway Dots', cursive;
+  font-size: 40px;
+  font-family: 'Rubik Mono One', cursive;
   color: #000;
-  border: 5px solid #000;
 }
 
 delete-btn {
   background-image: url('https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-512.png');
   background-repeat: no-repeat;
+}
+
+@media screen and (max-device-width: 736px) {
+  .todo-container {
+    height: 60vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+  .todo-item {
+    min-width: 70vw;
+    height: 70px;
+  }
+  input[type='text'] {
+    width: 60%;
+    font-size: 2rem;
+  }
+  input[type="text"]::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+  .heading {
+    font-size: 5rem;
+    margin-top: 10vh;
+  }
 }
