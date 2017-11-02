@@ -20,7 +20,7 @@
     span.appendChild(todoText);
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
-
+    };
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.className = 'delete-btn';
