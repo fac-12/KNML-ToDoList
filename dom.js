@@ -17,6 +17,7 @@
     var todoNode = document.createElement('li');
     var span = document.createElement('span');
     var todoText = document.createTextNode(todo.description);
+    todoNode.className = 'todo-item';
     span.appendChild(todoText);
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
@@ -51,7 +52,7 @@
     event.preventDefault();
 
    todos.description = event.target.description.value;
-   description = " ";// event.target ....
+   event.target.description.value = " ";// event.target ....
    todos.done = false;
 
 

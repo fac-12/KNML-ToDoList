@@ -1,0 +1,32 @@
+.todo-item {
+  background-color: red;
+  margin: 5%;
+  margin-left: 0;
+  min-width: 50vw;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5rem;
+  padding: 2%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.todo-item span{
+  display: inline-block;
+  min-width: 200px;
+}
+
+.todo-container {
+display: flex;
+flex-direction: column;
+background-color: yellow;
+justify-content: space-around;
+align-items: center;
+flex-wrap: nowrap;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: blue;
+}
