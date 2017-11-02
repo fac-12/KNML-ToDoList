@@ -102,9 +102,8 @@ input[value="+"]{
   color: #000;
 }
 
-delete-btn {
-  background-image: url('https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-512.png');
-  background-repeat: no-repeat;
+.strikethrough {
+  text-decoration: line-through;
 }
 
 @media screen and (max-device-width: 736px) {
