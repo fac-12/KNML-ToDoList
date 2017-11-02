@@ -6,13 +6,15 @@ test('tape is working', function(t) {
   const expected = 1;
   t.equals(actual, expected, 'one should equal one');
 t.end();
-};
+});
 
   var testArr = [
     { id: -3, description: 'first todo', done: true},
     { id: -2, description: 'second todo', done: false},
     { id: -1, description: 'third todo', done: false},
   ];
+  var newTodoTest =
+    { description: "new2", done: true};
 
 // tests for deleteToDo function
 
@@ -59,40 +61,23 @@ test('Element with idToMark done value will be toggled', function(t) {
 // tests for addTodo function
 
 test('addTodo returns an object', function(t) {
-  t.equal(typeof logic.addTodo(todoTest, newTodoTest), "object", "Addtodo returns an object");
+  t.equal(typeof logic.addTodo(testArr, newTodoTest), "object", "Addtodo returns an object");
   t.end();
 });
 test('Addtodo returns an object with newTodo added', function(t){
-  t.equal(logic.addTodo(todoTest, newTodoTest).length, todoTest.length +1, "Addtodo returns an object with newTodo added");
+  t.equal(logic.addTodo(testArr, newTodoTest).length, testArr.length +1, "Addtodo returns an object with newTodo added");
   t.end();
 });
 test('Returns the todo argument unchanged', function(t){
-  t.equal(todoTest, [{id: -1, description: "smash avocados", done: true,},{id: 0, description: "make coffee", done: false,},];, "Addtodo returns todo argument unchanged");
+  t.deepEqual(testArr, [
+    { id: -3, description: 'first todo', done: true},
+    { id: -2, description: 'second todo', done: false},
+    { id: -1, description: 'third todo', done: false},
+  ], 'Returns the todo argument unchanged');
   t.end();
 });
-// //need to find a method to use on the object that checks for id
+//need to find a method to use on the object that checks for id
 // test('Addtodo generates a new id', function(t){
-//   t.equal(logic.addTodo(todoTest, newTodoTest), "", "Addtodo generates a new id");
+//   t.equal(logic.addTodo(testArr, newTodoTest)[logic.addTodo(testArr, newTodoTest).length + 1].hasOwnProperty("id"), true, "Addtodo generates a new id");
 //   t.end();
-// })
-});
-
-var todoTest = [
-  {
-    id: -1,
-    description: "smash avocados",
-    done: true,
-},
-
- {
-   id: 0,
-   description: "make coffee",
-   done: false,
- },
-];
-
-var newTodoTest =
-  {
-    description: "new2",
-    done: true,
-  };
+// });
