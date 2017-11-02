@@ -2,30 +2,34 @@
   background-color: white;
   margin: 5%;
   margin-left: 0;
+  padding: 0;
   min-width: 50vw;
   font-family: 'Rubik', sans-serif;
   font-size: 2rem;
-  padding: 2%;
   display: block;
   box-sizing: border-box;
+  height: 50px;
 }
 
 .todo-item span{
   display: inline-block;
-  min-width: 300px;
+  min-width: 80%;
+  padding-left: 5%;
+  box-sizing: border-box;
 }
 
 .todo-container {
 display: flex;
 flex-direction: column;
-background: rgba(137, 243, 255, 0.6);
 justify-content: space-around;
 align-items: center;
 flex-wrap: nowrap;
-height: 50vh;
+height: 60vh;
+min-width: 60vw;
 margin-left: 20vw;
 margin-right: 20vw;
-margin-top: 10vh;
+position: fixed;
+bottom: 10vh;
 }
 
 
@@ -33,7 +37,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /*background-color: blue;*/
+  overflow-y: scroll;
 }
 
 body {
@@ -43,6 +47,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 .heading {
   display: flex;
   justify-content: center;
@@ -80,9 +85,21 @@ input[type='submit'] {
   width: 5%;
   font-family: 'Rubik Mono One', sans-serif;
 }
+button {
+/*color: rgba(255,255,255,0.5);*/
+width: 10%;
+height: 100%;
+border-left-color: white;
+font-size: 1em;
+}
 
 input[value="+"]{
   font-size: 65px;
   font-family: Raleway Dots, cursive;
   color: #fff;
+}
+
+delete-btn {
+  background-image: url('https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-512.png');
+  background-repeat: no-repeat;
 }
