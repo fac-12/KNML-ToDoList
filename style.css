@@ -3,11 +3,14 @@
   margin: 5%;
   margin-left: 0;
   min-width: 50vw;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
   font-size: 2rem;
   padding: 2%;
   display: block;
   box-sizing: border-box;
+  -webkit-box-shadow: -4px 9px 39px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -4px 9px 39px 3px rgba(0,0,0,0.75);
+  box-shadow: -4px 9px 39px 3px rgba(0,0,0,0.75);
 }
 
 .todo-item span{
@@ -18,7 +21,6 @@
 .todo-container {
 display: flex;
 flex-direction: column;
-background: rgba(137, 243, 255, 0.6);
 justify-content: space-around;
 align-items: center;
 flex-wrap: nowrap;
@@ -65,11 +67,13 @@ input[type='text'] {
   border: none;
   outline: none;
   text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 input[type="text"]::-webkit-input-placeholder {
   text-align: center;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #ffffff;
 }
 
@@ -77,12 +81,13 @@ input[type='submit'] {
   border-radius: 5%;
   outline: none;
   border: none;
-  width: 5%;
+  width: 10%;
   font-family: 'Rubik Mono One', sans-serif;
 }
 
 input[value="+"]{
   font-size: 65px;
-  font-family: Raleway Dots, cursive;
-  color: #fff;
+  font-family: 'Raleway Dots', cursive;
+  color: #000;
+  border: 5px solid #000;
 }
