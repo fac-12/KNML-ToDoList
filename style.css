@@ -1,3 +1,41 @@
+.todo-item {
+  background-color: white;
+  margin: 5%;
+  margin-left: 0;
+  min-width: 50vw;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  padding: 2%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.todo-item span{
+  display: inline-block;
+  min-width: 300px;
+}
+
+.todo-container {
+display: flex;
+flex-direction: column;
+background: rgba(137, 243, 255, 0.6);
+justify-content: space-around;
+align-items: center;
+flex-wrap: nowrap;
+height: 50vh;
+margin-left: 20vw;
+margin-right: 20vw;
+margin-top: 10vh;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*background-color: blue;*/
+}
+
 body {
   background-image: url('./Images/buildings.jpg');
   background-position: center center;

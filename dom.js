@@ -17,7 +17,8 @@
     var todoNode = document.createElement('li');
     var span = document.createElement('span');
     var todoText = document.createTextNode(todo.description);
-    todoText.className = 'todoText';
+      todoNode.className = 'todo-item';
+      todoText.className = 'todoText';
     span.appendChild(todoText);
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
