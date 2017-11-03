@@ -30,6 +30,8 @@
     deleteButtonNode.className = 'delete-btn';
     var deleteText = document.createTextNode('✘');
     deleteButtonNode.appendChild(deleteText);
+    var x = todoFunctions.generateId();
+    deleteButtonNode.id = x;
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -40,7 +42,10 @@
     var markTodoButtonNode = document.createElement('button');
     markTodoButtonNode.className = 'markTodo-btn';
 
-    // markTodoButtonNode.id = 'markBtn'
+    var y = todoFunctions.generateId();
+    markTodoButtonNode.id = y;
+
+
     var markText = document.createTextNode('✔');
     markTodoButtonNode.appendChild(markText);
     markTodoButtonNode.addEventListener('click', function(event) {

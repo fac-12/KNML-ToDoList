@@ -91,6 +91,7 @@ input[type='submit'] {
   width: 10%;
   font-family: 'Rubik Mono One', sans-serif;
 }
+
 button {
 /*color: rgba(255,255,255,0.5);*/
 width: 10%;
@@ -103,6 +104,10 @@ input[value="+"]{
   font-size: 40px;
   font-family: 'Rubik Mono One', cursive;
   color: #000;
+}
+
+.screenreader {
+  display: none;
 }
 
 .strikethrough {
