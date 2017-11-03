@@ -18,15 +18,6 @@ t.end();
 
 // tests for deleteToDo function
 
-test('input array has not been altered', function(t) {
-    t.deepEqual(testArr, [
-      { id: -3, description: 'first todo', done: true},
-      { id: -2, description: 'second todo', done: false},
-      { id: -1, description: 'third todo', done: false},
-    ], "input array should not be altered");
-    t.end();
-});
-
 test('output is an array', function(t) {
   t.equal(Array.isArray(logic.deleteTodo(testArr, -2)), true, "typeof output should be an array");
   t.end();
@@ -38,15 +29,6 @@ test('array length is one less than input length', function(t) {
 });
 
 // tests for markTodo function
-
-test('input array has not been altered', function(t) {
-    t.deepEqual(testArr, [
-      { id: -3, description: 'first todo', done: true},
-      { id: -2, description: 'second todo', done: false},
-      { id: -1, description: 'third todo', done: false},
-    ], "input array should not be altered");
-    t.end();
-});
 
 test('output is an array', function(t) {
   t.equal(Array.isArray(logic.markTodo(testArr, -2)), true, "typeof output should be an array");
@@ -66,14 +48,6 @@ test('addTodo returns an array', function(t) {
 });
 test('Addtodo returns an object with newTodo added', function(t){
   t.equal(logic.addTodo(testArr, newTodoTest).length, testArr.length +1, "Addtodo returns an object with newTodo added");
-  t.end();
-});
-test('Returns the todo argument unchanged', function(t){
-  t.deepEqual(testArr, [
-    { id: -3, description: 'first todo', done: true},
-    { id: -2, description: 'second todo', done: false},
-    { id: -1, description: 'third todo', done: false},
-  ], 'Returns the todo argument unchanged');
   t.end();
 });
 //need to find a method to use on the object that checks for id

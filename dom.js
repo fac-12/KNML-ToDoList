@@ -16,7 +16,12 @@
     var span = document.createElement('span');
     var todoText = document.createTextNode(todo.description);
       todoNode.className = 'todo-item';
-      todoText.className = 'todoText strikethrough';
+      todoText.className = 'todoText';
+      if (todo.done == true) {
+        span.classList.add("strikethrough");
+      } else {
+          span.classList.remove("strikethrough");
+      }
     span.appendChild(todoText);
     todoNode.appendChild(span);
 
@@ -36,20 +41,18 @@
     // adds the markTodo button
     var markTodoButtonNode = document.createElement('button');
     markTodoButtonNode.className = 'markTodo-btn';
+
     var y = todoFunctions.generateId();
     markTodoButtonNode.id = y;
+
+
     var markText = document.createTextNode('✔');
     markTodoButtonNode.appendChild(markText);
     markTodoButtonNode.addEventListener('click', function(event) {
 
       var newState = todoFunctions.markTodo(state, todo.id);
-      if (span.classList.contains("strikethrough")) {
-        span.classList.remove("strikethrough");
-        todo.done = false;
-      } else {
-          span.classList.add("strikethrough");
-          todo.done= true;
-      }
+
+    update(newState);
 
     });
     todoNode.appendChild(markTodoButtonNode);
