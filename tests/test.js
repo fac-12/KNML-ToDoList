@@ -60,8 +60,8 @@ test('Element with idToMark done value will be toggled', function(t) {
 
 // tests for addTodo function
 
-test('addTodo returns an object', function(t) {
-  t.equal(typeof logic.addTodo(testArr, newTodoTest), "object", "Addtodo returns an object");
+test('addTodo returns an array', function(t) {
+  t.equal(Array.isArray(logic.addTodo(testArr, newTodoTest)), true, 'Addtodo should return an array');
   t.end();
 });
 test('Addtodo returns an object with newTodo added', function(t){
