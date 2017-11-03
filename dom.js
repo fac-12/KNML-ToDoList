@@ -23,17 +23,6 @@
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
 
-    // this adds the delete button
-    var deleteButtonNode = document.createElement('button');
-    deleteButtonNode.className = 'delete-btn';
-      var deleteText = document.createTextNode('✘');
-      deleteButtonNode.appendChild(deleteText);
-    deleteButtonNode.addEventListener('click', function(event) {
-      var newState = todoFunctions.deleteTodo(state, todo.id);
-      update(newState);
-    });
-    todoNode.appendChild(deleteButtonNode);
-
     // add markTodo button
     var markTodoButtonNode = document.createElement('button');
     markTodoButtonNode.className = 'markTodo-btn';
@@ -41,7 +30,7 @@
     var markText = document.createTextNode('✔');
     markTodoButtonNode.appendChild(markText);
     markTodoButtonNode.addEventListener('click', function(event) {
-      
+
       var newState = todoFunctions.markTodo(state, todo.id);
       if (span.classList.contains("strikethrough")) {
         span.classList.remove("strikethrough");
@@ -52,9 +41,20 @@
           todo.done= true;
       }
     // update(newState);
-
+    
     });
     todoNode.appendChild(markTodoButtonNode);
+
+    // this adds the delete button
+    var deleteButtonNode = document.createElement('button');
+    deleteButtonNode.className = 'delete-btn';
+      var deleteText = document.createTextNode('✘');
+      deleteButtonNode.appendChild(deleteText);
+    deleteButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.deleteTodo(state, todo.id);
+      update(newState);
+    });
+    todoNode.appendChild(deleteButtonNode);
 
     // add classes for css
 
