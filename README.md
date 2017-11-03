@@ -1,6 +1,8 @@
 # To Do Project
 ## Students Hack (Lucy, Nat, Mo, & Kitty)
 
+https://fac-12.github.io/KNML-ToDoList/
+
 Our project was to create a todo list that had the following user stories:
 
 * enter tasks I need to do into a web page so that I don't forget them
@@ -8,11 +10,11 @@ Our project was to create a todo list that had the following user stories:
 * mark tasks as complete so that I can focus on the tasks I have left
 * the to-dos to be large enough so that I don't hit the wrong one with my thumb
 
-This was done with TDD in mind, and part of our project was to write failing tests first. In terms of the styling we were a bit nostalgic and wanted an 80s fun feel. 
+This was done with TDD in mind, and part of our project was to write failing tests first. In terms of the styling we were a bit nostalgic and wanted an 80s fun feel.
 
 ### How:
 
-This week's project required less planning than previous ones, as a lot of the code was already structured into manageable sections. We split into pairs and started working with our tests and logic first. Once this was fully completed we moved onto the DOM and finally the CSS. 
+This week's project required less planning than previous ones, as a lot of the code was already structured into manageable sections. We split into pairs and started working with our tests and logic first. Once this was fully completed we moved onto the DOM and finally the CSS.
 
 
 Our stretch goals:
