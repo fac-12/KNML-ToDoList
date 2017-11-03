@@ -104,6 +104,7 @@ input[value="+"]{
 
 .strikethrough {
   text-decoration: line-through;
+  color: rgb(250,58,119);
 }
 
 @media screen and (max-device-width: 736px) {
