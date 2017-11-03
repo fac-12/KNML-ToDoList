@@ -4,6 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <meta charset="utf-8">
     <title>tdd todo</title>
+    <html lang = 'en'>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Rubik+Mono+One" rel="stylesheet">
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
@@ -12,7 +13,8 @@
   <body>
     <h1 class='heading'>To Do List</h1>
     <form id="add-todo" class='add-todo' autocomplete="off">
-      <input type="text" name="description" value="" placeholder="Type your To Do Here" required>
+      <input type="text" name="description" value="" placeholder="Type your To Do Here" id="input" required>
+      <label class ="screenreader" for="input">Write to do here</label>
       <input type="submit" name="" value="+">
     </form>
     <div id = "todo-container" class="todo-container">
