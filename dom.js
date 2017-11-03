@@ -18,32 +18,15 @@
     var span = document.createElement('span');
     var todoText = document.createTextNode(todo.description);
       todoNode.className = 'todo-item';
-      todoText.className = 'todoText strikethrough';
+      todoText.className = 'todoText';
+      if (todo.done == true) {
+        span.classList.add("strikethrough");
+      } else {
+          span.classList.remove("strikethrough");
+      }
     span.appendChild(todoText);
     todoNode.appendChild(span);
     //We need to add our todo logic in here, so that it follows onto the things
-
-    // add markTodo button
-    var markTodoButtonNode = document.createElement('button');
-    markTodoButtonNode.className = 'markTodo-btn';
-    markTodoButtonNode.id = 'markBtn'
-    var markText = document.createTextNode('✔');
-    markTodoButtonNode.appendChild(markText);
-    markTodoButtonNode.addEventListener('click', function(event) {
-
-      var newState = todoFunctions.markTodo(state, todo.id);
-      if (span.classList.contains("strikethrough")) {
-        span.classList.remove("strikethrough");
-        todo.done = false;
-        console.log(span.classList);
-      } else {
-          span.classList.add("strikethrough");
-          todo.done= true;
-      }
-    // update(newState);
-    
-    });
-    todoNode.appendChild(markTodoButtonNode);
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
@@ -55,6 +38,19 @@
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
+
+    // add markTodo button
+    var markTodoButtonNode = document.createElement('button');
+    markTodoButtonNode.className = 'markTodo-btn';
+    // markTodoButtonNode.id = 'markBtn'
+    var markText = document.createTextNode('✔');
+    markTodoButtonNode.appendChild(markText);
+    markTodoButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.markTodo(state, todo.id);
+    update(newState);
+
+    });
+    todoNode.appendChild(markTodoButtonNode);
 
     // add classes for css
 
